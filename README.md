@@ -1,4 +1,4 @@
-# KumaModal 모달 라이브러리
+# [KumaModal 모달 라이브러리](https://www.npmjs.com/package/sample-modal-woowacourse-kuma?activeTab=readme)
 
 간단한 모달을 구현할 수 있는 React 전용 라이브러리입니다.
 

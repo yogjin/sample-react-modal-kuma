@@ -1,0 +1,1 @@
+export { KumaModal } from './KumaModal';

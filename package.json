@@ -1,6 +1,6 @@
 {
-  "name": "sample-modal-kuma",
-  "version": "0.0.1",
+  "name": "sample-modal-woowacourse-kuma",
+  "version": "0.0.2",
   "description": "woowacourse npm publish practice with custom react modal",
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "@types/node": "^16.18.25",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.1",
+    "@types/styled-components": "^5.1.26",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -62,5 +63,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "styled-components": "^5.3.10"
   }
 }

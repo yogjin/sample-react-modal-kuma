@@ -10,17 +10,7 @@ npm i sample-modal-woowacourse-kuma
 
 ## 의존성
 
-해당 라이브러리는 `styled-components`를 이용하므로, 설치해주세요
-
-```sh
-npm i styled-components
-```
-
-### typescript를 이용하는 경우
-
-```sh
-npm i styled-components @types/styled-components
-```
+해당 라이브러리는 `styled-components, @types/styled-components`를 이용합니다.
 
 ## 사용 방법
 

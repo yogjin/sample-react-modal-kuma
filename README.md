@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+# KumaModal 모달 라이브러리
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+간단한 모달을 구현할 수 있는 React 전용 라이브러리입니다.
 
-## Available Scripts
+## 설치 방법
 
-In the project directory, you can run:
+```sh
+npm i sample-modal-woowacourse-kuma
+```
 
-### `npm start`
+## 의존성
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+해당 라이브러리는 `styled-components`를 이용하므로, 설치해주세요
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```sh
+npm i styled-components
+```
 
-### `npm test`
+### typescript를 이용하는 경우
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+npm i styled-components @types/styled-components
+```
 
-### `npm run build`
+## 사용 방법
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### MyModal 컴포넌트 불러오기
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```tsx
+import { KumaModal } from 'sample-modal-woowacourse-kuma';
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### MyModal 사용하기
 
-### `npm run eject`
+```jsx
+<KumaModal trigger={<button>열기</button>}>
+  <h2>제목</h2>
+  <p>내용</p>
+</KumaModal>
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Props
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+trigger: 모달을 열기 위한 요소. React element 형태로 전달합니다.
+children: 모달 내부에 들어갈 컨텐츠입니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```ts
+type Props = {
+  trigger: React.ReactElement;
+  children?: React.ReactNode;
+};
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 사용 예시
 
-## Learn More
+```js
+import { KumaModal } from 'sample-modal-woowacourse-kuma';
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+function App() {
+  return (
+    <div>
+      <MyModal trigger={<button>모달 열기</button>}>
+        <h2>제목</h2>
+        <p>내용</p>
+      </MyModal>
+    </div>
+  );
+}
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+export default App;
+```
